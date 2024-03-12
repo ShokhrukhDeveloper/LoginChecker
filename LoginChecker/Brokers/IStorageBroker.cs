@@ -6,5 +6,6 @@ namespace LoginChecker.Brokers
     {
         Credential[] GetAllCredentials();
 
+        Credential AddCredential(Credential credential);
     }
 }

@@ -3,7 +3,7 @@ using LoginChecker.Models;
 
 namespace LoginChecker.Services
 {
-    public class LoginService
+    public class LoginService : ILoginService
     {
         private readonly IStorageBroker storageBroker;
 
