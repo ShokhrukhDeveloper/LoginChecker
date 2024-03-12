@@ -1,6 +1,6 @@
 using LoginChecker.Models;
 
-namespace LoginChecker.Services
+namespace LoginChecker.Services.Login
 {
     public interface ILoginService
     {

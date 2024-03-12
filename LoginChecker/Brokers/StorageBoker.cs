@@ -4,13 +4,13 @@ namespace LoginChecker.Brokers
 {
     public class StorageBoker : IStorageBroker
     {
-        private const string FilePath = "../../../Assets/Credentials.txt";
+        private const string FilePath = "../../../../Assets/Credentials.txt";
 
         public StorageBoker()
         {
             EnsureFileExists();
         }
-        
+
         private static Credential[] credentials =
         {
             new Credential{Username="shox", Password="12345" },

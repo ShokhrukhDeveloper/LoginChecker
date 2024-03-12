@@ -1,7 +1,7 @@
 using LoginChecker.Brokers;
 using LoginChecker.Models;
 
-namespace LoginChecker.Services
+namespace LoginChecker.Services.Login
 {
     public class LoginService : ILoginService
     {
