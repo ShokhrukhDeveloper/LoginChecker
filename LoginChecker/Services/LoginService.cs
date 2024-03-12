@@ -16,7 +16,7 @@ namespace LoginChecker.Services
         {
             foreach (Credential credentialItem in storageBroker.GetAllCredentials())
             {
-                if (credential.UserName == credentialItem.UserName && credential.Password == credentialItem.Password)
+                if (credential.Username == credentialItem.Username && credential.Password == credentialItem.Password)
                 {
                     return true;
                 }
