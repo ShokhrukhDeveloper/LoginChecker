@@ -10,6 +10,7 @@ _Usage_
    - Output: true if the user's credentials are valid, false otherwise
 
 Sample usage:
+
 ![image](https://github.com/ShokhrukhDeveloper/LoginChecker/assets/90793925/b217a2f4-3f2f-498a-bbb3-4908dd5400a5)
 
 2. **AddCredential**:
@@ -18,6 +19,7 @@ Sample usage:
    - Output: true if the credentials are added successfully, false otherwise
 
 Sample usage:
+
 ![image](https://github.com/ShokhrukhDeveloper/LoginChecker/assets/90793925/a6b3a8ad-f7a6-4490-8592-423da4552c7b)
 
 
