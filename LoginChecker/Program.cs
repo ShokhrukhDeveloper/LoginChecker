@@ -40,7 +40,7 @@ namespace LoginChecker
                     string inputLogin = Console.ReadLine();
                     Console.Write("Enter password:");
                     string inputPassword = Console.ReadLine();
-                    bool result = credentialService.AddCredential(new Credential() { Username = inputLogin, Password = inputPassword });
+                    Credential result = credentialService.AddCredential(new Credential() { Username = inputLogin, Password = inputPassword });
                     Console.WriteLine("Successfully added");
                 }
                 Console.WriteLine("Do you want to continue? yes(y)/no(n)");
