@@ -20,7 +20,7 @@ Sample usage:
 
 Sample usage:
 
-![image](https://github.com/ShokhrukhDeveloper/LoginChecker/assets/90793925/a6b3a8ad-f7a6-4490-8592-423da4552c7b)
+![image](https://github.com/ShokhrukhDeveloper/LoginChecker/assets)
 
 
 _Getting Started_

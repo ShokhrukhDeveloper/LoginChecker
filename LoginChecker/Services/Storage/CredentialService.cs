@@ -6,7 +6,7 @@ namespace LoginChecker.Services.Storage
     public class CredentialService : ICredentialService
     {
         private readonly IStorageBroker storageBroker;
-        partial readonly ILoggingBroker loggingBroker;
+        private readonly ILoggingBroker loggingBroker;
 
         public CredentialService()
         {
@@ -33,8 +33,7 @@ namespace LoginChecker.Services.Storage
 
         private Credential CreateAndLogInvalidCredential()
         {
-
-            Console.WriteLine("Contact is invalid");
+            this.loggingBroker.LogError("Contact is invalid");
             return new Credential();
         }
 
@@ -43,7 +42,7 @@ namespace LoginChecker.Services.Storage
             if ( String.IsNullOrWhiteSpace(credential.Username)
                 || String.IsNullOrWhiteSpace(credential.Password))
             {
-                Console.WriteLine("Contact details missing.");
+                this.loggingBroker.LogError("Contact details missing.");
 
                 return new Credential();
             }

@@ -1,7 +1,7 @@
 ﻿
 namespace LoginChecker.Brokers
 {
-    internal class LoggingBroker
+    internal class LoggingBroker : ILoggingBroker
     {
         public void LogError(Exception exception)
         {

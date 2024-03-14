@@ -6,7 +6,7 @@ namespace LoginChecker.Services.Login
     public class LoginService : ILoginService
     {
         private readonly IStorageBroker storageBroker;
-        partial readonly ILoggingBroker loggingBroker;
+        private readonly ILoggingBroker loggingBroker;
 
         public LoginService()
         {
