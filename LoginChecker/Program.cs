@@ -8,7 +8,6 @@ namespace LoginChecker
     {
         public static void Main(string[] args)
         {
-            Credential credential = new Credential() { Username = "Rifat", Password = "Salombek1900" };
             ILoginService loginService = new LoginService();
             ICredentialService credentialService = new CredentialService();
             bool running=true;
@@ -34,6 +33,7 @@ namespace LoginChecker
                         Console.WriteLine("Passwod or Username invalid");
                     }
                 }
+
                 if (option == "2")
                 {
                     Console.Write("Enter login:");
@@ -45,6 +45,7 @@ namespace LoginChecker
                 }
                 Console.WriteLine("Do you want to continue? yes(y)/no(n)");
                 string continueInput = Console.ReadLine();
+
                 if (continueInput=="y")
                 {
                     continue;
@@ -55,12 +56,10 @@ namespace LoginChecker
                 }
                 else
                 {
-                    Console.WriteLine("Invgalid option");
+                    Console.WriteLine("Invalid option");
                 }
             } while (running);
             
-
-            credentialService.AddCredential(credential);
         }
     }
 }

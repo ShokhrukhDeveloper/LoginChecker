@@ -27,8 +27,7 @@ namespace LoginChecker.Services.Storage
                 this.loggingBroker.LogError($"Error occured at {nameof(AddCredential)} plaese contact developer");
                 this.loggingBroker.LogError(exception);
                 return CreateAndLogInvalidCredential();
-            }
-            
+            }  
         }
 
         private Credential CreateAndLogInvalidCredential()
