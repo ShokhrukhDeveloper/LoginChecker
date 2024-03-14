@@ -14,15 +14,24 @@ namespace LoginChecker.Services.Storage
 
         public Credential AddCredential(Credential credential)
         {
+            try
+            {
             return credential is null
-                ? CreateAndLogInvalidCredential()
-                : ValidateAndAddCredential(credential);
+                            ? CreateAndLogInvalidCredential()
+                            : ValidateAndAddCredential(credential);
+            }
+            catch (Exception)
+            {
+
+               return CreateAndLogInvalidCredential();
+            }
+            
         }
 
         private Credential CreateAndLogInvalidCredential()
         {
-            Console.WriteLine("Contact is invalid");
 
+            Console.WriteLine("Contact is invalid");
             return new Credential();
         }
 

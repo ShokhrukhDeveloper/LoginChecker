@@ -14,6 +14,8 @@ namespace LoginChecker.Services.Login
 
         public bool CheckUserLogin(Credential credential)
         {
+            try
+            {
             foreach (Credential credentialItem in storageBroker.GetAllCredentials())
             {
                 if (credential.Username == credentialItem.Username && credential.Password == credentialItem.Password)
@@ -21,6 +23,13 @@ namespace LoginChecker.Services.Login
                     return true;
                 }
             }
+            }
+            catch (Exception)
+            {
+
+                
+            }
+
 
             return false;
         }
