@@ -6,10 +6,12 @@ namespace LoginChecker.Services.Login
     public class LoginService : ILoginService
     {
         private readonly IStorageBroker storageBroker;
+        partial readonly ILoggingBroker loggingBroker;
 
         public LoginService()
         {
             this.storageBroker = new StorageBoker();
+            this.loggingBroker = new LoggingBroker();
         }
 
         public bool CheckUserLogin(Credential credential)
@@ -24,10 +26,11 @@ namespace LoginChecker.Services.Login
                 }
             }
             }
-            catch (Exception)
+            catch (Exception exception)
             {
 
-                
+                this.loggingBroker.LogError($"Error occured at {nameof(CheckUserLogin)} plaese contact developer"); 
+                this.loggingBroker.LogError(exception); 
             }
 
 

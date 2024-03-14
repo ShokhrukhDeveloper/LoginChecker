@@ -6,10 +6,12 @@ namespace LoginChecker.Services.Storage
     public class CredentialService : ICredentialService
     {
         private readonly IStorageBroker storageBroker;
+        partial readonly ILoggingBroker loggingBroker;
 
         public CredentialService()
         {
-            storageBroker = new StorageBoker();
+            this.storageBroker = new StorageBoker();
+            this.loggingBroker = new LoggingBroker();
         }
 
         public Credential AddCredential(Credential credential)
@@ -20,10 +22,11 @@ namespace LoginChecker.Services.Storage
                             ? CreateAndLogInvalidCredential()
                             : ValidateAndAddCredential(credential);
             }
-            catch (Exception)
+            catch (Exception exception)
             {
-
-               return CreateAndLogInvalidCredential();
+                this.loggingBroker.LogError($"Error occured at {nameof(AddCredential)} plaese contact developer");
+                this.loggingBroker.LogError(exception);
+                return CreateAndLogInvalidCredential();
             }
             
         }
