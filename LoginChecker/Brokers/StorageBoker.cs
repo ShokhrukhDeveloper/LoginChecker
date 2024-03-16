@@ -4,7 +4,7 @@ namespace LoginChecker.Brokers
 {
     public class StorageBoker : IStorageBroker
     {
-        private const string FilePath = "../../../../Assets/Credentials.txt";
+        private const string FilePath = "Assets/Credentials.txt";
 
         public StorageBoker()
         {
